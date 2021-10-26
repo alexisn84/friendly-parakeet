@@ -26,7 +26,8 @@ function writePassword() {
 
   //write if condition to check if pw lenth if less than 8 or greateer than 128
   if (length >= 8 && length <=128 ) {
-    window.prompt("Would you like numbers included in your password?")
+    var numberOption = window.prompt("Would you like numbers included in your password?");
+    console.log(numberOption);
     }
 
     else {
@@ -34,25 +35,18 @@ function writePassword() {
     }
 
   //write full confirm if they want #, upper/lower and special characters
-  plan = function() {
-    var pwOptionPrompt = window.prompt("Let's select a few options to help create your password.");
+  var stringOption = window.prompt(
+    "Would you like lower case letters?");
+    console.log(stringOption);
 
-      switch(pwOptionPrompt) {
-        
-        case 1:
-          string();
-        
-          case 2:
-            number();
+  var upperOption = window.prompt(
+    "Would you like uppercase letters?");
+    console.log(upperOption);
 
-          case 3:
-            special();
-
-          case 4:
-            upper();
-      }
-    }
-
+  var specialOption = window.prompt(
+    "Would you like special characters?");
+    console.log(specialOption);
+    
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
