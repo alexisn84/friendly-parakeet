@@ -1,8 +1,8 @@
 // Assignment code here
 
 //need 4 different Arrays with different options
-var string = ["abcdefghijklmnopqrstuvwxyz"];
-var upper = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+var string = "abcdefghijklmnopqrstuvwxyz" .split("");
+var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
 var number =['0123456789'];
 var special = ['!@#$%^&*()_+~`|}{[]\:;?><,./-='];
 
@@ -18,6 +18,7 @@ generateBtn.disabled = false;
 
 // Write password to the #password input
 function writePassword() {
+  var password = ["string", "upper", "number", "special"]
 
   //write variable for length
   var length = window.prompt(
@@ -26,24 +27,25 @@ function writePassword() {
 
   //write if condition to check if pw lenth if less than 8 or greateer than 128
   if (length >= 8 && length <=128 ) {
-    var numberOption = window.prompt("Would you like numbers included in your password?");
+    var numberOption = window.confirm("Would you like numbers included in your password?");
     console.log(numberOption);
     }
 
     else {
       window.alert("Please choose a differnt length, the one you have chosen is to small or to large.")
+      return length;
     }
 
   //write full confirm if they want #, upper/lower and special characters
-  var stringOption = window.prompt(
+  var stringOption = window.confirm(
     "Would you like lower case letters?");
     console.log(stringOption);
 
-  var upperOption = window.prompt(
+  var upperOption = window.confirm(
     "Would you like uppercase letters?");
     console.log(upperOption);
 
-  var specialOption = window.prompt(
+  var specialOption = window.confirm(
     "Would you like special characters?");
     console.log(specialOption);
     
