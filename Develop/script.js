@@ -1,6 +1,5 @@
 // Assignment code here
 
-//need 4 different Arrays with different options
 var string = "abcdefghijklmnopqrstuvwxyz" .split("");
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
 var number ="0123456789" .split("");
@@ -81,13 +80,16 @@ function writePassword() {
     if (specialOption) {
       possPassword += special;
       console.log(possPassword);
-    
+
+      passwordText.value = password;
+      var passwordText = document.querySelector("#password");   
+      
+      passwordText.value = password;
     }
     
   generatePassword(possPassword);
-  var passwordText = document.querySelector("#password");
-console.log(possPassword);
-  passwordText.value = password;
+  console.log(possPassword);
+  
   };
 
 // Add event listener to generate button
