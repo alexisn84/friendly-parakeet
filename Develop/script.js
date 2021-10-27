@@ -7,14 +7,18 @@ var number ="0123456789" .split("");
 var special = "!@#$%^&*" .split("");
 
 //give generatePassword function a parameter
-function generatePassword(posscharacters){ 
+function generatePassword(place){ 
   //create var to pass the characters to
-  var options = possPassword;
+  
 
   //use math random function to select  posscharacters from array
-  for (var i = 0; i < length; i++) {
-    options += length.charAt(Math.floor(Math.random()* length));
-  }
+  var randomChars = possPassword;
+    var result = '';
+    for ( var i = 0; i < length; i++ ) {
+        result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+    }
+    return result;
+
   console.log(generatePassword);
 
   //change text content to display variable values .hint.join( ) function
@@ -29,6 +33,7 @@ generateBtn.disabled = false;
 // Write password to the #password input
 function writePassword() {
   var possPassword = [];
+
   //write variable for length
   var length = window.prompt(
     "How long would you like your password to be?");
