@@ -6,22 +6,25 @@ var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
 var number ="0123456789" .split("");
 var special = "!@#$%^&*" .split("");
 
+var possPassword = [];
+
 //give generatePassword function a parameter
-function generatePassword(place){ 
+function generatePassword() { 
   //create var to pass the characters to
   
 
   //use math random function to select  posscharacters from array
-  var randomChars = possPassword;
-    var result = '';
+  //var randomChars = possPassword;
+    
     for ( var i = 0; i < length; i++ ) {
-        result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
-    }
-    return result;
+        result += possPassword.charAt(Math.floor(Math.random() * randomChars.length));
 
+    }
+    
   console.log(generatePassword);
 
   //change text content to display variable values .hint.join( ) function
+  
 }
 
 // Get references to the #generate element
@@ -32,8 +35,7 @@ generateBtn.disabled = false;
 
 // Write password to the #password input
 function writePassword() {
-  var possPassword = [];
-
+  
   //write variable for length
   var length = window.prompt(
     "How long would you like your password to be?");
@@ -84,7 +86,7 @@ function writePassword() {
     
     }
     
-  var password = generatePassword();
+  generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
