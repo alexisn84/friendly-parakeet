@@ -1,35 +1,16 @@
 // Assignment code here
 
-var string = "abcdefghijklmnopqrstuvwxyz" .split("");
-var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
-var number ="0123456789" .split("");
-var special = "!@#$%^&*" .split("");
+var string = "abcdefghijklmnopqrstuvwxyz".split("");
+var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var number ="0123456789".split("");
+var special = "!@#$%^&*".split("");
 
-
-var possPassword = "";
 
 //give generatePassword function a parameter
 function generatePassword(characters) { 
-  
-  //var randomChars = possPassword;
-    var result;
-    
-   
-    
-  return result;
-  //change text content to display variable values .hint.join( ) function
-  
-}
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+  var password = []
 
-// Enable button
-generateBtn.disabled = false;
-
-// Write password to the #password input
-function writePassword() {
-    
   //write variable for length
   var length = window.prompt(
     "How long would you like your password to be?");
@@ -42,8 +23,8 @@ function writePassword() {
     }
 
     if(numberOption) {
-      possPassword += number;
-      console.log(possPassword);
+      password = password.concat(number);
+      console.log(password);
     }
 
     else {
@@ -57,8 +38,8 @@ function writePassword() {
     console.log(stringOption);
 
     if(stringOption) {
-      possPassword += string;
-      console.log(possPassword);
+      password = password.concat(string);
+      console.log(password);
     }
 
   var upperOption = window.confirm(
@@ -66,8 +47,8 @@ function writePassword() {
     console.log(upperOption);
 
     if(upperOption) {
-      possPassword += upper;
-      console.log(possPassword);
+      password = password.concat(upper);
+      console.log(password);
     }
 
   var specialOption = window.confirm(
@@ -75,23 +56,35 @@ function writePassword() {
     console.log(specialOption);
 
     if (specialOption) {
-      possPassword += special;
-      console.log(possPassword);
-
+      password = password.concat(special);
+      console.log(password);
     }
   
     var result = "";
-    //math random function
+    //math random function needs to be broken up
     for ( var i = 0; i < length; i++ ) {
-      result += possPassword(Math.floor(Math.random() * possPassword.length));
+      result += password[Math.floor(Math.random() * password.length)];
       console.log(result);
   }
+    
+  return result;
+}
+
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+
+// Enable button
+generateBtn.disabled = false;
+
+// Write password to the #password input
+function writePassword() {
+    var password = generatePassword(); 
 
   var passwordText = document.querySelector("#password");   
       
-  passwordText.value = result;
+  passwordText.value = password;
   
-  console.log(possPassword);
+  
   
   };
 
