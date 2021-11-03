@@ -11,6 +11,6 @@ To create a random generator to select passwords. This is to be used in a work a
 
 
 ## Contribution
-Password generator created by Alexis El Amrani and HTML/CSS provided by UCF Bootcamp course.
+Password generator JavaScript created by Alexis El Amrani and HTML/CSS provided by UCF Bootcamp course.
 
 ### 
