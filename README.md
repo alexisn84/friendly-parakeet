@@ -8,7 +8,7 @@ To create a random generator to select passwords. This is to be used in a work a
 *JS
 
 ##Photo of web browser
-<img src="pic.generate.jpg" alt="Password Generator"/>
+<img src="https://github.com/alexisn84/friendly-parakeet/blob/main/Develop/Assets/pic.generate.jpg" alt="Password Generator"/>
 
 ## Website
 https://alexisn84.github.io/friendly-parakeet/
