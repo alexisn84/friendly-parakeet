@@ -7,11 +7,12 @@ To create a random generator to select passwords. This is to be used in a work a
 *CSS
 *JS
 
-##Photo of web browser
+##Links
+https://alexisn84.github.io/friendly-parakeet/
+
+##Images
 <img src="https://github.com/alexisn84/friendly-parakeet/blob/main/Develop/Assets/pic.generate.jpg" alt="Password Generator"/>
 
-## Website
-https://alexisn84.github.io/friendly-parakeet/
 
 ## Contribution
 Password generator JavaScript created by Alexis El Amrani and HTML/CSS provided by UCF Bootcamp course.
